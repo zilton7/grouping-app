@@ -1,6 +1,11 @@
 <h3>Sign Up</h3>
 <p>Create new account</p>
-
+<% if @user.errors.full_messages.any? %>
+  <% @user.errors.full_messages.each do |error_message| %>
+    <%= error_message if @user.errors.full_messages.first == error_message %> <br />
+  <% end %>
+<% end %>
+<p class="flash"><%=flash.notice%></p>
 <div>
     <%= form_with(model: @user, local: true) do |f| %>
     <%= f.text_field :name, placeholder: "Name" %>

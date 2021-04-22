@@ -1,6 +1,6 @@
 <br/>
     <h3>Sign In</h3>
-
+<p class="flash"><%=flash.notice%></p>
 <div>
     <%= form_with(url: sign_in_path, scope: :session, local: true) do |f| %>
     <%= f.text_field :name, placeholder: "Name" %>

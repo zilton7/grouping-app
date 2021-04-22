@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:show]
-  def home; end
+  def index
+  end
 
   def show
     @user = current_user
@@ -17,6 +18,7 @@ class UsersController < ApplicationController
       flash[:success] = 'Welcome to the app!'
       redirect_to @user
     else
+      flash[:danger] = 'Error!'
       render 'new'
     end
   end
