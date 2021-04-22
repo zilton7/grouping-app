@@ -1,0 +1,15 @@
+<html class="show">
+
+<body class="show">
+    <div class="w-100 justify-content-center d-flex mb-3"><img class="mt-5 rounded-circle w-25" src="https://i.ibb.co/X254Sr0/user-silhouette-icon.png" alt="no img"></div>
+    <h3 class="text-center"><%= @user.name.capitalize %></h3>
+    <% @user.created_at.strftime("%b %d, %Y") %>
+    <div>
+        <div class="w-100 my-4 d-flex align-items-start"><i class="fas fa-sign-out-alt mx-3"></i>
+            <div class="link"><%= link_to "Log out", sign_out_path, method: :delete, class: "links" %></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

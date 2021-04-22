@@ -1,0 +1,9 @@
+<h3>Sign Up</h3>
+<p>Create new account</p>
+
+<div>
+    <%= form_with(model: @user, local: true) do |f| %>
+    <%= f.text_field :name, placeholder: "Name" %>
+    <%= f.submit "next" %>
+    <% end %>
+</div>
