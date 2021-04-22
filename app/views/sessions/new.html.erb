@@ -1,0 +1,12 @@
+<br/>
+    <h3>Sign In</h3>
+
+<div class="login-page">
+    <div>
+        <%= form_with(url: sign_in_path, scope: :session, local: true) do |f| %>
+        <%= f.text_field :name, placeholder: "Name" %>
+        <%= f.submit "Sign in" %>
+        <% end %>
+
+    </div>
+</div>
