@@ -1,4 +1,8 @@
 class GiftsController < ApplicationController
+  def index
+    @gifts = Gift.where(author: current_user)
+  end
+
   def new
     @group = Group.find(params[:group_id])
     @gift = @group.gifts.new

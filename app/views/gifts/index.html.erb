@@ -1,0 +1,5 @@
+<h3>All Gifts by <%= current_user.name %></h3>
+
+<% @gifts.each do |g| %>
+    <div><%= link_to  "#{g.name} by #{g.author.name}", gift_path(g) %></div>
+<% end %>

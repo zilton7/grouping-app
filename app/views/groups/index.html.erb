@@ -1,0 +1,5 @@
+<h3>All Groups</h3>
+
+<% @groups.each do |g| %>
+    <div><%= link_to  "#{g.name} by #{g.user.name}", group_path(g) %></div>
+<% end %>
