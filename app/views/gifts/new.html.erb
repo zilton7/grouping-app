@@ -1,0 +1,8 @@
+<h3>Add Gift</h3>
+<%= form_with model: [@group, @group.gifts.build]  do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+    <%= f.submit %>
+<% end %>
