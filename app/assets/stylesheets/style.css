@@ -4,6 +4,14 @@
   --text: #434b54;
 }
 
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 2vh;
 }
@@ -52,6 +60,8 @@ body {
 .links a {
   color: white;
   font-size: 2rem;
+  margin-right: 2rem;
+  text-decoration: none;
 }
 
 .menu {
@@ -61,8 +71,14 @@ body {
 .menu-item {
   border-bottom: solid 0.1rem var(--main);
   list-style: none;
+  text-decoration: none;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.menu-item:hover {
+  scale: 0.98;
+  border-bottom: solid 0.1rem #0b1a2c;
 }
 
 .icon {
