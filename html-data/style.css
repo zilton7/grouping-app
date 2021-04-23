@@ -21,6 +21,12 @@ body {
   background-repeat: no-repeat;
 }
 
+.user-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .user-top {
   display: flex;
   flex-direction: column;

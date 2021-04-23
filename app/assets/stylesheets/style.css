@@ -29,6 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2rem;
 }
 
 .user-image {
@@ -39,6 +40,12 @@ body {
 
 .user-name {
   color: white;
+  font-size: 3rem;
+}
+
+.user-signout-link {
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 .links,
