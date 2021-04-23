@@ -1,5 +1,27 @@
-<h3>All Gifts by <%= current_user.name %></h3>
-
-<% @gifts.each do |g| %>
-    <div><%= link_to  "#{g.name} by #{g.author.name} - #{g.group.name} - #{g.created_at}", gift_path(g) %></div>
-<% end %>
+<div class="page">
+    <div class="head-top">
+        <%= link_to user_path(current_user) do %>
+            <i class="fas fa-bars"></i>
+        <% end %>
+        <h3><%= current_user.name.capitalize %>'s Gifts</h3>
+        <i class="fas fa-search"></i>
+    </div>
+    <div class="head-low">
+        <p>Total Cost</p>
+        <p class="price">$<%= @gifts.sum(:amount) %></p>
+    </div>
+    <div class="list-items">
+    <% @gifts.each do |g| %>
+        <%= link_to group_path(g) do %>
+        <div class="list-item">
+            <%= insert_icon(g.group) %>
+            <div class="list-text">
+                <p class="list-name"><%= g.name %></p>
+                <p class="list-date"><%= g.created_at.strftime("%Y-%m-%d") %></p>
+            </div>
+            <p class="price">Price: $<%= g.amount %></p>
+        </div>
+        <% end %>
+    <% end %>
+    </div>
+</div>
