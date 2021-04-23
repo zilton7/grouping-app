@@ -17,7 +17,6 @@ class GiftsController < ApplicationController
       flash[:success] = 'Gift saved!'
       redirect_to @group
     else
-      p @gift.errors.full_messages
       render :new
     end
   end

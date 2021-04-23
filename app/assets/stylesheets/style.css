@@ -16,13 +16,15 @@ html {
   font-size: 2vh;
 }
 
-a {
+a,
+a:hover {
   text-decoration: none;
 }
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page {
@@ -144,6 +146,10 @@ body {
   align-items: center;
 }
 
+.list-item:hover {
+  background: rgb(243, 243, 243);
+}
+
 .list-name {
   font-size: 1.5rem;
 }
@@ -176,4 +182,11 @@ body {
 
 .create-group .button:hover {
   scale: 1.02;
+}
+
+.flash-message {
+  color: white;
+  width: 33vw;
+  font-size: 1.5rem;
+  text-align: center;
 }

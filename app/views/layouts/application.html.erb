@@ -13,8 +13,14 @@
     <%= stylesheet_link_tag 'style.css' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+      <% flash.each do |type, msg| %>
+      <div class="flash-message bg-<%= type %>">
+        <%= msg %>
+      </div>
+    <% end %>
+
     <%= yield %>
+
   </body>
 </html>
