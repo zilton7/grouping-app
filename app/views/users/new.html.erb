@@ -1,14 +1,17 @@
-<h3>Sign Up</h3>
-<p>Create new account</p>
-<% if @user.errors.full_messages.any? %>
-  <% @user.errors.full_messages.each do |error_message| %>
-    <%= error_message if @user.errors.full_messages.first == error_message %> <br />
-  <% end %>
-<% end %>
-<p class="flash"><%=flash.notice%></p>
-<div>
+<div class="page">
+    <div class="head-top text-center mb-5">
+        <h3><i class="fas fa-gift"> Gift Grouping App</i> Sign up</h3>
+    </div>
+    <div class="text-center mt-5">
     <%= form_with(model: @user, local: true) do |f| %>
-    <%= f.text_field :name, placeholder: "Name" %>
-    <%= f.submit "next" %>
+          <% if @user.errors.full_messages.any? %>
+        <% @user.errors.full_messages.each do |error_message| %>
+          <p class="text-danger text-center"><%= error_message if @user.errors.full_messages.first == error_message %> <br />
+        </p>
+        <% end %>
+      <% end %>
+      <%= f.text_field :name, placeholder: "Name" %>
+      <%= f.submit class: 'btn btn-lg btn-primary w-50 m-4' %>
     <% end %>
+    </div>
 </div>
