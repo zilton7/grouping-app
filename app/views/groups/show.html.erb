@@ -16,7 +16,7 @@
     </div>
     <div class="list-items">
     <% @group.gifts.each do |g| %>
-        <%= link_to group_path(g) do %>
+        <%= link_to gift_path(g) do %>
         <div class="list-item">
             <%= insert_icon(g.group) %>
             <div class="list-text">

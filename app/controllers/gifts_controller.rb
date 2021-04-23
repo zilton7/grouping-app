@@ -14,8 +14,8 @@ class GiftsController < ApplicationController
     @gift.author = @group.user
 
     if @gift.save
-      puts 'hooray'
-      redirect_to @gift
+      flash[:success] = 'Gift saved!'
+      redirect_to @group
     else
       p @gift.errors.full_messages
       render :new
