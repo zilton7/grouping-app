@@ -114,7 +114,6 @@ body {
 }
 
 .head-low {
-  height: 15vh;
   background: white;
   color: var(--text);
   display: flex;
