@@ -1,4 +1,34 @@
-<h3><%= @group.name %></h3>
-<div><%= @group.user.name %></div>
-
-<%= link_to 'Add Gift', new_group_gift_path(@group) %>
+<div class="page">
+    <div class="head-top">
+        <%= link_to user_path(current_user) do %>
+            <i class="fas fa-bars"></i>
+        <% end %>
+        <h3>Group: <%= @group.name %> </h3>
+        <i class="fas fa-search"></i>
+    </div>
+        <div class="head-mid">
+            <a href="#">Most recent</a>
+            <a href="#">Most ancient</a>
+        </div>
+    <div class="head-low">
+        <p>Total Cost</p>
+        <p class="price">$<%= @group.gifts.sum(:amount) %></p>
+    </div>
+    <div class="list-items">
+    <% @group.gifts.each do |g| %>
+        <%= link_to group_path(g) do %>
+        <div class="list-item">
+            <%= insert_icon(g.group) %>
+            <div class="list-text">
+                <p class="list-name"><%= g.name %></p>
+                <p class="list-date"><%= g.created_at.strftime("%Y-%m-%d") %></p>
+            </div>
+            <p class="price">Price: $<%= g.amount %></p>
+        </div>
+        <% end %>
+    <% end %>
+    </div>
+    <div class="create-group">
+        <%= link_to 'Add Gift', new_group_gift_path(@group), class: 'button'  %>
+    </div>
+</div>

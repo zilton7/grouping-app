@@ -115,7 +115,7 @@ body {
   height: 50vh;
   background: #e7e7e7;
   padding: 1rem;
-  overflow: scroll;
+  overflow-y: auto;
 }
 
 .list-item {
