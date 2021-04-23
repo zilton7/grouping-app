@@ -1,5 +1,31 @@
-<h3>All Groups</h3>
+    <div><%#= link_to  " by ", group_path(g) %></div>
 
-<% @groups.each do |g| %>
-    <div><%= link_to  "#{g.name} by #{g.user.name}", group_path(g) %></div>
-<% end %>
+
+    <div class="page">
+        <div class="head-top">
+            <i class="fas fa-bars"></i>
+            <h3>All Groups</h3>
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="head-low">
+            <p>Groups In Total</p>
+            <p class="price"><%= @groups.count %></p>
+        </div>
+        <div class="list-items">
+        <% @groups.each do |g| %>
+          <%= link_to group_path(g) do %>
+            <div class="list-item">
+                <%= insert_icon(g) %>
+                <div class="list-text">
+                    <p class="list-name"><%= g.name %></p>
+                    <p class="list-date"><%= g.created_at.strftime("%Y-%m-%d") %></p>
+                </div>
+                <p class="price">Gifts: <%= g.gifts.count %></p>
+            </div>
+            <% end %>
+        <% end %>
+        </div>
+        <div class="create-group">
+        <%= link_to 'Create Group', new_group_path, class: 'button'  %>
+        </div>
+    </div>

@@ -8,6 +8,10 @@ html {
   font-size: 62.5%;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -110,7 +114,7 @@ body {
   background: #ffffff;
   color: var(--text);
   padding: 0.5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -121,7 +125,7 @@ body {
 }
 
 .list-text {
-  width: 60%;
+  width: 50%;
   justify-items: flex-start;
 }
 
@@ -133,12 +137,12 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
   background: var(--second);
 }
 
-.create-group button {
+.create-group .button {
   width: 80%;
   padding: 1rem;
   background: transparent;
@@ -146,6 +150,6 @@ body {
   border: solid 0.2rem rgb(255, 255, 255);
 }
 
-.create-group button:hover {
+.create-group .button:hover {
   scale: 1.02;
 }
