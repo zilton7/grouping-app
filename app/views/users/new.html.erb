@@ -2,7 +2,7 @@
     <div class="head-top text-center mb-5">
         <h3><i class="fas fa-gift"> Gift Grouping App</i> Sign up</h3>
     </div>
-    <div class="text-center mt-5">
+    <div class="text-center mt-5 p-4">
     <%= form_with(model: @user, local: true) do |f| %>
           <% if @user.errors.full_messages.any? %>
         <% @user.errors.full_messages.each do |error_message| %>
@@ -10,8 +10,8 @@
         </p>
         <% end %>
       <% end %>
-      <%= f.text_field :name, placeholder: "Name" %>
-      <%= f.submit class: 'btn btn-lg btn-primary w-50 m-4' %>
+      <%= f.text_field :name, placeholder: "Name", class: 'w-100' %>
+      <%= f.submit class: 'btn btn-lg btn-primary w-100 mt-4' %>
     <% end %>
     </div>
 </div>

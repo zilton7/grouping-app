@@ -27,6 +27,16 @@ body {
   align-items: center;
 }
 
+form {
+  /* width: 90%; */
+  font-size: 1.5rem;
+}
+
+.btn {
+  /* width: 90%; */
+  font-size: 2rem;
+}
+
 .page {
   height: 100vh;
   width: 33vw;

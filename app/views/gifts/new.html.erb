@@ -5,17 +5,17 @@
         <% end %>
         <h3>Add gift to "<%= @group.name.capitalize %>"</h3>
         <i class="fas fa-search"></i>    </div>
-    <div class="text-center mt-5">
-    <%= form_with model: [@group, @group.gifts.build]  do |f| %>
+    <div class="text-center mt-5 p-4">
+      <%= form_with model: [@group, @group.gifts.build]  do |f| %>
           <% if @group.errors.full_messages.any? %>
-        <% @group.errors.full_messages.each do |error_message| %>
-          <p class="text-danger text-center"><%= error_message if @group.errors.full_messages.first == error_message %> <br />
-        </p>
-        <% end %>
+            <% @group.errors.full_messages.each do |error_message| %>
+              <p class="text-danger text-center"><%= error_message if @group.errors.full_messages.first == error_message %> <br />
+            </p>
+            <% end %>
+          <% end %>
+        <%= f.text_field :name, placeholder: 'Gift Name', class: 'w-100' %><br/><br/>
+        <%= f.text_field :amount, placeholder: 'Price', class: 'w-100' %>
+        <%= f.submit class: 'btn btn-lg btn-primary w-100 mt-4' %>
       <% end %>
-    <%= f.text_field :name, placeholder: 'Gift Name' %><br/><br/>
-    <%= f.text_field :amount, placeholder: 'Price' %>
-    <%= f.submit class: 'btn btn-lg btn-primary w-50 m-4' %>
-<% end %>
     </div>
 </div>
