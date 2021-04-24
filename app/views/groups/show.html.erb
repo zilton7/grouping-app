@@ -12,7 +12,7 @@
         </div>
     <div class="head-low">
         <p>Total Cost</p>
-        <p class="price">$<%= @group.gifts.sum(:amount) %></p>
+        <p class="price">$<%= @group.gifts.map(&:amount).sum %></p>
     </div>
     <div class="list-items">
     <% @group.gifts.each do |g| %>
