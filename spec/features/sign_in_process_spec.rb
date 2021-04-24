@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Sign In Processes", type: :feature do
+RSpec.feature "SignInProcesses", type: :feature do
   before(:each) do
     User.create(name: 'user')
   end
