@@ -10,9 +10,7 @@ RSpec.describe Group, type: :model do
 
     it { should validate_length_of(:name).is_at_least(3) }
 
-    too_long = 'a' * 25
-
-    it { should_not allow_value(too_long).for(:name) }
+    it { should_not allow_value('a' * 25).for(:name) }
 
     it { should allow_value(group.name).for(:name) }
 
