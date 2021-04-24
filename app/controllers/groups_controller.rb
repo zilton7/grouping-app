@@ -9,10 +9,10 @@ class GroupsController < ApplicationController
 
   def create
     user = User.find(current_user.id)
-    group = user.groups.build(group_params)
+    @group = user.groups.build(group_params)
 
-    if group.save
-      redirect_to group
+    if @group.save
+      redirect_to @group
     else
       render :new
     end

@@ -8,10 +8,10 @@
     <div class="text-center mt-5">
     <%= form_with(model: @group, local: true) do |f| %>
           <% if @group.errors.full_messages.any? %>
-        <% @group.errors.full_messages.each do |error_message| %>
-          <p class="text-danger text-center"><%= error_message if @group.errors.full_messages.first == error_message %> <br />
-        </p>
-        <% end %>
+            <% @group.errors.full_messages.each do |error_message| %>
+              <p class="text-danger text-center"><%= error_message if @group.errors.full_messages.first == error_message %> <br />
+              </p>
+            <% end %>
       <% end %>
       <%= f.text_field :name, placeholder: "Group name" %><br/><br/>
       <%= f.text_field :icon, placeholder: "https://" %>
