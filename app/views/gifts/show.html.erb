@@ -13,7 +13,19 @@
         </div>
         <div class="mt-5 d-flex justify-content-between">
             <p class="price">Price:</p>
-            <p class="price">$<%= @gift.amount %></p>
+            <p class="h4">$<%= @gift.amount %>
+        </div>
+        <div class="d-flex justify-content-between">
+            <p class="price">Author:</p>
+            <p class="h4"><%= @gift.author.name.capitalize %></p>
+        </div>
+        <div class="d-flex justify-content-between">
+            <p class="price">Gift ID:</p>
+            <p class="h4"><%= @gift.id %></p>
+        </div>
+        <div class="d-flex justify-content-between">
+            <p class="price">Created at:</p>
+            <p class="h4"><%= @gift.created_at.strftime("%Y-%m-%d") %></p>
         </div>
     </div>
 </div>
