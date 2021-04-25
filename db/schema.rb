@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2021_04_24_082242) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "group_id", null: false
+    t.bigint "group_id"
     t.index ["group_id"], name: "index_gifts_on_group_id"
     t.index ["user_id"], name: "index_gifts_on_user_id"
   end
