@@ -1,6 +1,10 @@
 class GiftsController < ApplicationController
   def index
-    @gifts = Gift.where(author: current_user)
+    if params['ungrouped']
+      @gifts = Gift.where(group: nil)
+    else
+      @gifts = Gift.where(author: current_user)
+    end
   end
 
   def new
