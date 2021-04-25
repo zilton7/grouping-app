@@ -1,0 +1,11 @@
+<%= form_with model: @gift  do |f| %>
+        <% if @gift.errors.full_messages.any? %>
+        <% @gift.errors.full_messages.each do |error_message| %>
+            <p class="text-danger text-center"><%= error_message if @gift.errors.full_messages.first == error_message %>
+            </p>
+        <% end %>
+    <% end %>
+    <%= f.text_field :name, placeholder: 'Gift Name', class: 'w-100' %><br/><br/>
+    <%= f.text_field :amount, placeholder: 'Price', class: 'w-100' %>
+    <%= f.submit class: 'btn btn-lg btn-primary w-100 mt-4' %>
+<% end %>

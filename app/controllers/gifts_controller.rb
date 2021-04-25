@@ -4,18 +4,30 @@ class GiftsController < ApplicationController
   end
 
   def new
-    @group = Group.find(params[:group_id])
-    @gift = @group.gifts.new
+    if request.original_url.include?('groups')
+      @group = Group.find(params[:group_id])
+      @gift = @group.gifts.new
+    else
+      @gift = Gift.new
+    end
   end
 
   def create
-    @group = Group.find(params[:group_id])
-    @gift = @group.gifts.create(gift_params)
-    @gift.author = @group.user
+    if request.original_url.include?('groups')
+      @group = Group.find(params[:group_id])
+      @gift = @group.gifts.create(gift_params)
+    else
+      @gift = Gift.create(gift_params)
+    end
+    @gift.author = current_user
 
     if @gift.save
       flash[:success] = 'Gift saved!'
-      redirect_to @group
+      if request.original_url.include?('groups')
+        redirect_to @group 
+      else 
+        redirect_to @gift
+      end
     else
       render :new
     end
