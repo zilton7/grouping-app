@@ -1,7 +1,7 @@
 class GiftsController < ApplicationController
   def index
     if params['ungrouped']
-      @gifts = Gift.where(group: nil)
+      @gifts = Gift.where(author: current_user).where(group: nil)
     else
       @gifts = Gift.where(author: current_user)
     end
