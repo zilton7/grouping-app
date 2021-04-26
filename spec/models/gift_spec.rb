@@ -19,7 +19,6 @@ RSpec.describe Gift, type: :model do
     it { should allow_value(1).for(:amount) }
 
     it { should_not allow_value('aa').for(:amount) }
-
   end
 
   describe 'Gift' do

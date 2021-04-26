@@ -1,9 +1,11 @@
+# rubocop:disable Metrics/BlockLength
+
 require 'rails_helper'
 
-RSpec.feature "CreateGiftProcesses", type: :feature do
+RSpec.feature 'CreateGiftProcesses', type: :feature do
   before(:each) do
     user = User.create(name: 'user')
-    Group.create(name: 'test-group', user: user, icon:'')
+    Group.create(name: 'test-group', user: user, icon: '')
     visit '/sign-in'
     fill_in 'session_name', with: 'user'
     click_button 'Sign in'
@@ -17,7 +19,7 @@ RSpec.feature "CreateGiftProcesses", type: :feature do
     fill_in 'gift_amount', with: 1
     click_on 'Create Gift'
     expect(page.status_code).to be(200)
-    expect(page).to have_content "Group: test-group"
+    expect(page).to have_content 'Group: test-group'
   end
 
   it 'Raises error if gift amount not provided' do
@@ -37,3 +39,4 @@ RSpec.feature "CreateGiftProcesses", type: :feature do
     expect(page).to have_content 'Name can\'t be blank'
   end
 end
+# rubocop:enable Metrics/BlockLength

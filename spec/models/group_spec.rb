@@ -13,7 +13,6 @@ RSpec.describe Group, type: :model do
     it { should_not allow_value('a' * 25).for(:name) }
 
     it { should allow_value(group.name).for(:name) }
-
   end
 
   describe 'Group' do

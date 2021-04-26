@@ -1,10 +1,10 @@
 class GiftsController < ApplicationController
   def index
-    if params['ungrouped']
-      @gifts = Gift.where(author: current_user).where(group: nil)
-    else
-      @gifts = Gift.where(author: current_user)
-    end
+    @gifts = if params['ungrouped']
+               Gift.where(author: current_user).where(group: nil)
+             else
+               Gift.where(author: current_user)
+             end
   end
 
   def new
@@ -28,8 +28,8 @@ class GiftsController < ApplicationController
     if @gift.save
       flash[:success] = 'Gift saved!'
       if request.original_url.include?('groups')
-        redirect_to @group 
-      else 
+        redirect_to @group
+      else
         redirect_to @gift
       end
     else

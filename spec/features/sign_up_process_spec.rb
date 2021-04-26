@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "SignUpProcesses", type: :feature do
+RSpec.feature 'SignUpProcesses', type: :feature do
   it 'Returns success if new user created' do
     visit '/sign-up'
     fill_in 'Name', with: 'user'

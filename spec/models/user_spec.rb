@@ -13,7 +13,6 @@ RSpec.describe User, type: :model do
     it { should_not allow_value('a' * 25).for(:name) }
 
     it { should allow_value(user.name).for(:name) }
-
   end
 
   describe 'User' do
@@ -21,5 +20,4 @@ RSpec.describe User, type: :model do
 
     it { should have_many(:gifts) }
   end
-
 end

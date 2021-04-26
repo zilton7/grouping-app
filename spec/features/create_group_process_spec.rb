@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "CreateGroupProcesses", type: :feature do
+RSpec.feature 'CreateGroupProcesses', type: :feature do
   before(:each) do
     User.create(name: 'user')
     visit '/sign-in'
@@ -14,7 +14,7 @@ RSpec.feature "CreateGroupProcesses", type: :feature do
     fill_in 'group_name', with: 'test'
     click_button 'Create Group'
     expect(page.status_code).to be(200)
-    expect(page).to have_content "Group: test"
+    expect(page).to have_content 'Group: test'
   end
 
   it 'Raises error if group name has already been taken' do

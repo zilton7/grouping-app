@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:show]
-  def index
-  end
+  def index; end
 
   def show
     @user = User.find(current_user.id)
