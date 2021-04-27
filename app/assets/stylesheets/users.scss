@@ -3,25 +3,24 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .user-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-  }
-  
-  .user-image {
-    width: 10rem;
-    border-radius: 50%;
-    margin-bottom: 2rem;
-  }
-  
-  .user-name {
-    color: white;
-    font-size: 3rem;
-  }
-  
-  .user-signout-link {
-    font-size: 1.5rem;
-    color: #fff;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.user-image {
+  width: 10rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.user-name {
+  color: white;
+  font-size: 3rem;
+}
+
+.user-signout-link {
+  font-size: 1.5rem;
+  color: #fff;
+}
