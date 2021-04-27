@@ -8,9 +8,9 @@ module GiftsHelper
   end
 
   def insert_gift_icon(obj, size = '50')
-    if obj.groups[0]
-      if obj.groups[0].icon != ''
-        image_tag(obj.icon, size: size, alt: "#{obj.name} icon")
+    if obj.groups.first
+      if obj.groups.first.icon != ''
+        image_tag(obj.groups.first.icon, size: size, alt: "#{obj.name} icon")
       else
         image_tag('https://via.placeholder.com/50', size: size, alt: "#{obj.name} icon")
       end
