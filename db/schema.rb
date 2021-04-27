@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_24_082242) do
+ActiveRecord::Schema.define(version: 2021_04_27_102900) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,9 +21,16 @@ ActiveRecord::Schema.define(version: 2021_04_24_082242) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "group_id"
-    t.index ["group_id"], name: "index_gifts_on_group_id"
     t.index ["user_id"], name: "index_gifts_on_user_id"
+  end
+
+  create_table "gifts_groups", force: :cascade do |t|
+    t.bigint "group_id", null: false
+    t.bigint "gift_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["gift_id"], name: "index_gifts_groups_on_gift_id"
+    t.index ["group_id"], name: "index_gifts_groups_on_group_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -42,7 +49,8 @@ ActiveRecord::Schema.define(version: 2021_04_24_082242) do
     t.string "avatar"
   end
 
-  add_foreign_key "gifts", "groups"
   add_foreign_key "gifts", "users"
+  add_foreign_key "gifts_groups", "gifts"
+  add_foreign_key "gifts_groups", "groups"
   add_foreign_key "groups", "users"
 end
