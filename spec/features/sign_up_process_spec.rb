@@ -5,7 +5,6 @@ RSpec.feature 'SignUpProcesses', type: :feature do
     visit '/sign-up'
     fill_in 'Name', with: 'user'
     click_button 'Create User'
-    expect(page.status_code).to be(200)
     expect(page).to have_content 'Welcome to the app!'
   end
 

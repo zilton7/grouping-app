@@ -18,7 +18,6 @@ RSpec.feature 'CreateGiftProcesses', type: :feature do
     fill_in 'gift_name', with: 'gift-test'
     fill_in 'gift_amount', with: 1
     click_on 'Create Gift'
-    expect(page.status_code).to be(200)
     expect(page).to have_content 'Group: test-group'
   end
 

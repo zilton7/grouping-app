@@ -13,7 +13,6 @@ RSpec.feature 'CreateGroupProcesses', type: :feature do
     click_on 'Create Group'
     fill_in 'group_name', with: 'test'
     click_button 'Create Group'
-    expect(page.status_code).to be(200)
     expect(page).to have_content 'Group: test'
   end
 
