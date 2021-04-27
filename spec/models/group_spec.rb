@@ -17,7 +17,5 @@ RSpec.describe Group, type: :model do
 
   describe 'Group' do
     it { should belong_to(:user) }
-
-    # it { should have_many(:gifts) }
   end
 end
