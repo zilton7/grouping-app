@@ -6,13 +6,13 @@ Rails.application.routes.draw do
   post '/sign-in', to: 'sessions#create'
   delete '/sign-out', to: 'sessions#destroy'
 
-  resources :users
+  resources :users, only: %i[index new create show]
 
-  resources :groups
+  resources :groups, only: %i[index new create show]
   resources :groups do
     resources :gifts, only: %i[create new]
   end
 
-  resources :gifts
+  resources :gifts, only: %i[index new create show]
 
 end
