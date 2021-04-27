@@ -13,3 +13,157 @@
  *= require_tree .
  *= require_self
  */
+
+:root {
+  --main: #3778c2;
+  --second: #5fb523;
+  --text: #434b54;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 2vh;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  /* width: 90%; */
+  font-size: 1.5rem;
+}
+
+.btn {
+  /* width: 90%; */
+  font-size: 2rem;
+}
+
+.page {
+  height: 100vh;
+  width: 33vw;
+  background-image: linear-gradient(to top right, var(--main), #0b1a2c);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.links,
+.links a {
+  color: white;
+  font-size: 2rem;
+  margin-right: 2rem;
+  text-decoration: none;
+}
+
+.menu {
+  width: 30vw;
+}
+
+.menu-item {
+  border-bottom: solid 0.1rem var(--main);
+  list-style: none;
+  text-decoration: none;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.menu-item:hover {
+  scale: 0.98;
+  border-bottom: solid 0.1rem #0b1a2c;
+}
+
+.icon {
+  font-size: 2.5rem;
+}
+
+.head-top {
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.head-top i,
+.head-top h3 {
+  margin: 1rem;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.head-mid {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.head-mid a {
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.head-low {
+  background: white;
+  color: var(--text);
+  display: flex;
+  padding: 0 1rem 0 1rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.list-items {
+  height: 50vh;
+  background: #e7e7e7;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.list-item {
+  background: #fff;
+  color: var(--text);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item:hover {
+  background: rgb(243, 243, 243);
+}
+
+.list-name {
+  font-size: 1.5rem;
+}
+
+.list-text {
+  width: 50%;
+  justify-items: flex-start;
+}
+
+.flash-message {
+  color: white;
+  width: 33vw;
+  font-size: 1.5rem;
+  text-align: center;
+}
