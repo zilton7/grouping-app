@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 RSpec.describe Gift, type: :model do
@@ -28,4 +27,3 @@ RSpec.describe Gift, type: :model do
     # it { should belong_to(:group).optional }
   end
 end
-
