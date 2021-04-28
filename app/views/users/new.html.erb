@@ -4,12 +4,7 @@
     </div>
     <div class="text-center mt-5 p-4">
     <%= form_with(model: @user, local: true) do |f| %>
-          <% if @user.errors.full_messages.any? %>
-        <% @user.errors.full_messages.each do |error_message| %>
-          <p class="text-danger text-center"><%= error_message if @user.errors.full_messages.first == error_message %> <br />
-        </p>
-        <% end %>
-      <% end %>
+    <%= error_messages(@user) %>
       <%= f.text_field :name, placeholder: "Name", class: 'w-100' %>
       <%= f.submit class: 'btn btn-lg btn-primary w-100 mt-4' %>
     <% end %>
