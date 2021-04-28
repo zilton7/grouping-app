@@ -1,0 +1,12 @@
+<% @gifts.each do |g| %>
+    <%= link_to gift_path(g) do %>
+    <div class="list-item">
+        <%= insert_gift_icon(g) %>
+        <div class="list-text">
+            <p class="list-name"><%= g.name %></p>
+            <p class="list-date"><%= g.created_at.strftime("%Y-%m-%d") %></p>
+        </div>
+        <p class="price">Price: $<%= g.amount %></p>
+    </div>
+    <% end %>
+<% end %>
