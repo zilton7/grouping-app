@@ -1,68 +1,82 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Gift Grouping
 
-# PROJECT NAME
+![screenshot](./app_screenshot.png)
 
-We were asked to create a RE-FORMER project in order to learn about Rails forms. We created User model and implemented the pages for showing all users (index), createing user (new), and updating user (edit).
+Gift Grouping is a mobile-only app where you can sign up (and/or sign in), create groups and add gifts. View created groups created by all users and view only signed in user's added gifts.
 
 ## Built With
-- Ruby on Rails
-- Active Record
-- Bootstrap 4
-- Ruby
+
+- Ruby 2.7.2
+- Ruby on Rails 6.1.3
+
+## Live Demo
+
+[Live demo](https://grouping-app.herokuapp.com)
 
 ## Getting Started
 
-To get a local copy of the repository please run the following commands on your terminal: 
+To get a local copy up and running follow these simple example steps.
 
-``` 
-$ cd <folder> 
-```
+### Prerequisites
 
-``` 
-$ git clone git@github.com:garciajordy/re-former.git
-```
-``` 
-$ cd re-former 
-```
+- Ruby: 2.7.2 
+- Rails: 6.1.3
+- Postgres: 13.2
+- Rspec-rails
+- Capybara
+- Shoulda-matchers
 
-> Migrate the database
-``` 
-$ rails db:migrate 
-```
+### Setup
 
-> Run the rails server
+Instal gems with:
+
 ```
-$ rails server
+$ bundle install
 ```
 
-> In your browser, navigate to; fill the form to create an user
-``` 
-$ http://localhost:3000/users/new
+Setup database with:
+
+```
+$ rails db:create
+$ rails db:migrate
 ```
 
-> To edit an user, navigate to:
-``` 
-$ http://localhost:3000/users/2/edit
+## Testing
+
+> To test all models, write the following in your terminal:
+
+```
+$ rspec spec/models
 ```
 
-> In order to see all users, navigate to:
-``` 
-$ http://localhost:3000
+> To test all features, write the following in your terminal:
+
 ```
+$ rspec spec/features
+```
+
+
+## Usage
+
+Start server with:
+
+```
+$ rails s
+```
+
+ In your browser, navigate to: 
+ ```
+ http://localhost:3000/
+ ```
 
 ## AUTHOR
 
-**Zil Norvilis**
+**ZIL NORVILIS**
 
 - Github: [![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zilton7)
 - Linkedin: [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zil-norvilis/)
 - Twitter: [![](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/devnor7)
 
-## Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/zilton7/micro-reddit/issues).
 
 ## Show your support
 
@@ -70,11 +84,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
+- Hat tip to anyone whose code was used.
 - Inspiration
 - etc
-
-## License
-
-- This project is [MIT](https://opensource.org/licenses/MIT) licensed.
-- This project is [creativecommons](https://creativecommons.org/licenses/by-nc/4.0/) licensed.

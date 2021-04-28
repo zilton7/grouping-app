@@ -1,0 +1,6 @@
+<%= form_with model: @gift  do |f| %>
+    <%= error_messages(@gift) %>
+    <%= f.text_field :name, placeholder: 'Gift Name', class: 'w-100' %><br/><br/>
+    <%= f.text_field :amount, placeholder: 'Price', class: 'w-100' %>
+    <%= f.submit class: 'btn btn-lg btn-primary w-100 mt-4' %>
+<% end %>

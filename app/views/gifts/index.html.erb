@@ -1,0 +1,19 @@
+<div class="page">
+    <div class="head-top">
+        <%= link_to user_path(current_user) do %>
+            <i class="fas fa-bars"></i>
+        <% end %>
+        <h3><%= current_user.name.capitalize %>'s Gifts</h3>
+        <i class="fas fa-search"></i>
+    </div>
+    <div class="head-low">
+        <p>Total Cost</p>
+        <p class="price">$<%= @gifts.sum(:amount) %></p>
+    </div>
+    <div class="list-items">
+    <%= generate_gifts(@gifts) %>
+    </div>
+    <div class="create-group">
+        <%= link_to 'Add Gift', new_gift_path, class: 'button'  %>
+    </div>
+</div>

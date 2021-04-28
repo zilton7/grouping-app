@@ -1,0 +1,12 @@
+<div class="page">
+    <div class="head-top text-center mb-5">
+        <h3><i class="fas fa-gift"> Gift Grouping App</i> Sign up</h3>
+    </div>
+    <div class="text-center mt-5 p-4">
+    <%= form_with(model: @user, local: true) do |f| %>
+    <%= error_messages(@user) %>
+      <%= f.text_field :name, placeholder: "Name", class: 'w-100' %>
+      <%= f.submit class: 'btn btn-lg btn-primary w-100 mt-4' %>
+    <% end %>
+    </div>
+</div>
