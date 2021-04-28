@@ -12,20 +12,20 @@ module GroupsHelper
   end
 
   def groups_html_template(obj)
-    "<a href='/groups/#{ obj.id }'>
+    "<a href='/groups/#{obj.id}'>
       <div class='list-item'>
-      #{ insert_icon(obj) }
+      #{insert_icon(obj)}
       <div class='list-text'>
-              <p class='list-name'>#{ obj.name }</p>
-              <p class='list-date'>#{ obj.created_at }</p>
+              <p class='list-name'>#{obj.name}</p>
+              <p class='list-date'>#{obj.created_at}</p>
           </div>
-          <p class='price'>Gifts: #{ obj.gifts.count }</p>
+          <p class='price'>Gifts: #{obj.gifts.count}</p>
       </div>
     </a>"
   end
 
   def generate_groups(groups)
-    html_values = ""
+    html_values = ''
     groups.each do |g|
       html_values << groups_html_template(g)
     end

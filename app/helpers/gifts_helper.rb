@@ -20,20 +20,20 @@ module GiftsHelper
   end
 
   def gifts_html_template(obj)
-    "<a href='/gifts/#{ obj.id }'>
+    "<a href='/gifts/#{obj.id}'>
     <div class='list-item'>
-    #{ insert_gift_icon(obj) }
+    #{insert_gift_icon(obj)}
         <div class='list-text'>
-            <p class='list-name'>#{ obj.name }</p>
-            <p class='list-date'>#{ obj.created_at }</p>
+            <p class='list-name'>#{obj.name}</p>
+            <p class='list-date'>#{obj.created_at}</p>
         </div>
-        <p class='price'>Price: $#{ obj.amount }</p>
+        <p class='price'>Price: $#{obj.amount}</p>
     </div>
     </a>"
   end
 
   def generate_gifts(gifts)
-    html_values = ""
+    html_values = ''
     gifts.each do |g|
       html_values << gifts_html_template(g)
     end
