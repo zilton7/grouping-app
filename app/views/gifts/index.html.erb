@@ -11,7 +11,7 @@
         <p class="price">$<%= @gifts.sum(:amount) %></p>
     </div>
     <div class="list-items">
-    <%= render 'gifts' %>
+    <%= generate_gifts(@gifts) %>
     </div>
     <div class="create-group">
         <%= link_to 'Add Gift', new_gift_path, class: 'button'  %>

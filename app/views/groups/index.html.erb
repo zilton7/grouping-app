@@ -11,7 +11,7 @@
         <p class="price"><%= @groups.count %></p>
     </div>
     <div class="list-items">
-        <%= render 'groups' %>
+        <%= generate_groups(@groups) %>
     </div>
     <div class="create-group">
     <%= link_to 'Create Group', new_group_path, class: 'button'  %>
