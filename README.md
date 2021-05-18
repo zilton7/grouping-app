@@ -1,8 +1,7 @@
 # Gift Grouping
+Gift Grouping is a mobile-only app where you can sign up (and/or sign in), create groups and add gifts. View created groups created by all users and view only signed in user's added gifts.
 
 ![screenshot](./app_screenshot.png)
-
-Gift Grouping is a mobile-only app where you can sign up (and/or sign in), create groups and add gifts. View created groups created by all users and view only signed in user's added gifts.
 
 ## Built With
 
